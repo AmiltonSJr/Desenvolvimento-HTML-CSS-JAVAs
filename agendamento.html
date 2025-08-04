@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendar Horário</title>
+  <link rel="stylesheet" href="css/agendamento.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="./img/logoalt.jpeg" alt="Logo">
+      </a>
+    </div>
+  </header>
+
+  <section class="scheduling-section">
+    <div class="scheduling-container">
+      <h1>💈 Agende seu horário 💈</h1>
+      <form id="scheduling-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="service">Serviço:</label>
+        <select id="service" name="service" required>
+          <option value="">Escolha um serviço</option>
+          <option value="Corte de Cabelo">Corte de Cabelo</option>
+          <option value="Barba">Barba</option>
+          <option value="Combo">Corte + Barba</option>
+          <option value="Luzes">Luzes</option>
+          <option value="Clareamento">Clareamento</option>
+        </select>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Horário:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit">Enviar para WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="agendamento.js"></script>
+</body>
+</html>

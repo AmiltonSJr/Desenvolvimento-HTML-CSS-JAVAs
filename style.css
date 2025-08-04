@@ -1,0 +1,370 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+                               /*body*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*rolamento suave*/
+html{
+  scroll-behavior: smooth;
+}
+
+/* Evita que a página fique maior que a tela */
+body, html {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+                          /*logo*/
+.header {
+  display:contents;
+  position:static; /* ou use static se não quiser que o header fique fixo ao rolar */
+  background-color: #000000;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  padding: 20px 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+.logo img {
+  width: 110px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+              /*apresentação inicial do site*/
+.hero {
+  padding-top: 0%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imagens {
+  display: flex;
+  height: 100%;
+}
+
+.imagens img {
+  width: 33.333%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.texto-central h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.Ag {
+  padding-top: 5px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20;
+  display:inline-flex;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 15px; /* mais espaço entre os links */
+  color: rgb(240, 237, 237);
+  transition: transform 0.3s ease, color 0.3s ease; /* animação suave */
+}
+
+.Ag:hover {
+  transform: scale(1.1); /* efeito de zoom */
+  color: #ccc; /* muda ligeiramente a cor no hover (opcional) */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(5, 5, 5, 0.479); /*<---sombreamento do imagem principal*/
+  z-index: 1;
+}
+
+              /* aqui começa a apresentacao dos slides de fotos*/
+
+.menu-fotos-horizontal {
+  width: 100%;
+  overflow: hidden;
+  background: #000000;
+  padding: 10px 0;
+}
+
+.faixa-de-fotos {
+  display: flex;
+  width: max-content;
+  animation: deslizar-horizontal 15s linear infinite;
+}
+
+.menu-fotos-horizontal:hover .faixa-de-fotos {
+  animation-play-state:running;
+}
+
+.faixa-de-fotos img {
+  width: 210px;
+  margin: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.faixa-de-fotos img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  border-radius:0px;
+}
+
+@keyframes deslizar-horizontal {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 18, 18, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  animation: zoomin 0.3s ease;
+}
+
+@keyframes zoomin {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#menu{
+  color: white;
+  text-align: center;
+  background-color: #000;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30x;
+}
+
+                /* aqui começa a apresentacao do que é cortar cabelo + botão */
+.midcontainer{
+  background-color: #000000;
+  padding: 0 20px 0 20px;
+}
+.mcontainer{
+  padding: 20px 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+.editp{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  max-width: 900px;     
+  margin: 0 auto;       
+  padding: 40px 20px;   
+  text-align: justify;  
+  line-height: 1.8;          
+  
+}
+.buttons{
+  text-align: center;
+  padding:auto;
+}
+
+.glow-on-hover {
+    width:200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+     border-radius: 10px;
+    font-size:15px; 
+    font-family: Arial, Helvetica, sans-serif; /*aqui a cor da font*/
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #FF0000, #0004ff, #ffffff, #FF0000, #0004ff, #ffffff, #FF0000, #0004ff, #ffffff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+    font-style: oblique;
+    
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+                    /* aqui começa o mapa*/
+.map{
+  padding-top: 5px;
+  text-align: center;
+  height: 100%px;
+  border-top:white 1px solid;
+  
+}
+iframe{
+  border-radius:2px;
+  width: 100%;
+}
+
+                        /* aqui começa a apresentacao das redes*/
+
+.botton {
+  border-top: solid #c5c1c1 1px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap; /* se precisar quebrar em telas menores */
+}
+
+.botton img {
+  width:320px;      /* ajuste conforme necessário */
+  height: 300px;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s
+}
+.botton .box img:hover {
+  transform: scale(1.05); /* aumenta 5% no hover */
+}
+                            
+                               /* aqui começa a apresentacao sobre o dan*/
+.apresentacao {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #040404;
+}
+
+.textoesquerda {
+  width: 66.666%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+}
+
+.textoesquerda h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.imagensap {
+  width: 33.333%;
+  height: 100%;
+}
+
+.imagensap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foot{
+  border-top:3px solid rgb(247, 238, 238);
+  background-color: #000000;
+  text-align: center;
+}
+.foot img{
+  padding-top: 10px;
+  height: 50px;
+}
+.foot p{
+  color:white;
+  font-size: 17px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-top: 20px;
+}
+.whatsapp{
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3 ease;
+}
+.whatsapp img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rbga( 0,0,0,0.3);
+}
+.whatsapp:hover{
+  transform: scale(1.1);
+}

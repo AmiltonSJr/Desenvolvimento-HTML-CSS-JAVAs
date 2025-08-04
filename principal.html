@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <title>HOME | StudioDan</title>
+</head>
+<body>
+                          
+                          <!--Aqui começa o logo -->
+  <header class="header">
+    <div class="logo">
+      <img src="./img/logoalt.jpeg" alt="Logo">
+    </div>
+  </header>
+                
+                  <!--Aqui começa a apresentação inicial do site com botões -->
+  <section class="hero">
+    <div class="imagens">
+      <img src="./img/eqp1.jpg" alt="Foto 1">
+      <img src="./img/eqp3.jpg" alt="Foto 2">
+      <img src="./img/eqp2.jpg" alt="Foto 3">
+    </div>
+    <div class="texto-central">
+     <h1>SEJA BEM VINDO</h1>
+     <a href="agendamento.html" class="Ag">AGENDAMENTO</a>
+     <a href="#contatoss" class="Ag">CONTATOS</a>
+     <a href="#localizacao" class="Ag">LOCALIZAÇÃO</a>
+     <a href="#sobre" class="Ag">SOBRE</a>
+  </section>
+  
+                    <!--Aqui começa as apresentações dos cortes -->
+  <section class="menu-fotos-horizontal">
+    <div class="faixa-de-fotos">
+                              
+                              <!--Fotos Selecionada-->
+      <img src="./img/modelo1.png" alt="Foto 1" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo2.png" alt="Foto 2" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo3.png" alt="Foto 3" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo4.png" alt="Foto 4" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo5.png" alt="Foto 5" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo6.png" alt="Foto 6" onclick="abrirImagem(this.src)">
+                                
+                              <!--Looping das imagens-->
+      <img src="./img/modelo1.png" alt="Foto 1" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo2.png" alt="Foto 2" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo3.png" alt="Foto 3" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo4.png" alt="Foto 4" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo5.png" alt="Foto 5" onclick="abrirImagem(this.src)">
+      <img src="./img/modelo6.png" alt="Foto 6" onclick="abrirImagem(this.src)">
+    </div>
+  </section>
+
+                          <!-- MODAL para abrir imagem -->
+  <div id="modal" class="modal" onclick="fecharImagem()">
+    <img id="imagem-expandida" src="">
+  </div>
+  
+                      <!--Aqui começa o texto sobre cabelo e etc... -->
+<section class="midcontainer" id="sobre">
+    <div class="mcontainer">
+      <h1 id="menu">💈 SOBRE NÓS 💈</h1>
+        <p class="editp">No nosso salão, acreditamos que cortar o cabelo vai muito além de uma simples mudança de visual. Cada atendimento é uma oportunidade de transformação, cuidado e autoestima. Nosso trabalho é valorizar o que cada cliente tem de melhor, trazendo estilo, confiança e bem-estar.Cuidar do cabelo é cuidar de si mesmo. Um corte bem feito tem o poder de renovar a aparência, reforçar a identidade e aumentar a autoconfiança. É impressionante como pequenos detalhes no visual refletem diretamente no humor, na forma de se portar e até mesmo na maneira como somos percebidos pelas outras pessoas.Sabemos que o tempo no salão não é apenas sobre estética — é um momento de relaxamento, de pausa na correria do dia a dia, e de conexão com quem você é. E é por isso que cada cliente é atendido com atenção, carinho e profissionalismo, garantindo uma experiência completa e personalizada.Nossa missão é entregar mais do que um corte: é entregar bem-estar, autoestima elevada e a satisfação de se olhar no espelho e se sentir bem com quem se é. Venha viver essa experiência com a gente. Seu cabelo, sua identidade, sua confiança — transformados com estilo.</p>  
+        <button class="glow-on-hover" type="button" src="#">AGENDE SEU HORÁRIO</button>  
+    </div>
+</section>
+                          
+                          <!--Aqui começa a localização "mapa" -->
+    <div class="map" id="localizacao">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.356683282292!2d-46.58894569999999!3d-23.519670299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f33db852659%3A0x96ded3065416c0e6!2sR.%20Profa.%20Maria%20Jos%C3%A9%20Barone%20Fernandes%2C%20770%20-%20Vila%20Maria%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002117-022!5e0!3m2!1spt-BR!2sbr!4v1753199672852!5m2!1spt-BR!2sbr" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </div>
+    
+  </section>
+                      
+                      <!--Aqui começa a apresentação dos pontos "imagens" -->
+  <section class="botton">
+    <div class="box" >
+        <img src="./img/espaco1.jpg" alt="foto 1">
+        <img src="./img/espaco1.jpg" alt="foto 2">
+        <img src="./img/espaco1.jpg" alt="foto 3">
+        <img src="./img/espaco1.jpg" alt="foto 4">
+   </div>
+  </section>
+                           
+                          <!--Aqui começa a apresentação -->
+ <!-- <section class="apresentacao" id="sobre">
+  <div class="textoesquerda">
+    <h1>SOBRE DANIEL SILVA</h1>
+  </div>
+  <div class="imagensap">
+    <img src="./img/dan1.jpg" alt="Foto 1">
+  </div>
+</section>-->
+<footer class="foot" id="contatoss">
+  
+  <div class="">
+    <p>  StudioDan</p>
+    <a href="https://www.instagram.com/studiodan_?igsh=dGhobGFuZ2dwc3Ey">
+      <img src="./img/instagram (1).png" alt="1"></a>
+    <p>© Daniel Silva</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/"  class="whatsapp" target="blank">
+  <img src="./img/whatsapp (1).png" alt="whatsapp">
+</a>
+                        <!-- Script JavaScript -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

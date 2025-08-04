@@ -1,0 +1,108 @@
+@media screen and (max-width: 1005px) {
+  /* Header e logo centralizados */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logo img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* HERO SECTION responsiva */
+  .hero {
+  display: flex;
+  flex-wrap: nowrap; /* ou wrap se quiser quebrar linha em telas pequenas */
+  overflow-x: auto;
+  gap: 10px;
+  padding: 5px;
+  scroll-behavior: smooth;
+  justify-content: center; /* ou start */
+  align-items: center;
+}
+
+.hero img {
+  width: 200px;
+  height: auto;
+  border-radius: 1px;
+  flex: 0 0 auto; /* impede de encolher */
+}
+
+  .texto-central {
+    margin-top: 20px;
+  }
+
+  .Ag {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+  }
+
+  /* FAIXA DE FOTOS HORIZONTAL -> faz scroll lateral */
+  .faixa-de-fotos {
+  display:flex;
+  overflow-x: auto;
+  gap: 1px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.faixa-de-fotos img {
+  width: 100px;
+  height: auto;
+  flex: 0 0 auto; /* Não deixa encolher, força lado a lado */
+  border-radius:1px;
+}
+
+  /* MCONTAINER - texto sobre */
+  .mcontainer {
+    padding: 20px;
+  }
+
+  .editp {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  /* FOOTER ajustado */
+  footer.foot {
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer img {
+    width: 30px;
+    height: auto;
+  }
+
+  /* ÍCONE WHATSAPP responsivo */
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* já que quer à esquerda */
+    z-index: 999;
+    width: 55px;
+    height: 55px;
+  }
+
+  .whatsapp img {
+    width: 100%;
+    height: auto;
+  }
+.botton img {
+  width: 145px;
+  height: auto;
+  flex: 0 0 auto;  /* evita que as imagens encolham */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.botton img:hover {
+  transform: scale(1.1);
+}
+}
